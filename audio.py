@@ -7,7 +7,7 @@ def main():
     pass
 
 
-def text_to_audio(bark_model='suno/bark', voice_preset='v2/ru_speaker_6', text='Something'):
+def text_to_audio(bark_model='suno/bark', voice_preset='v2/ru_speaker_6', text='Something happened right'):
     model = BarkModel.from_pretrained(bark_model)
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     model = model.to(device)
